@@ -9,11 +9,16 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
+
+    function isMacOS() {
+        return navigator.platform === 'MacIntel' && !navigator.userAgent.includes('Mobile');
+    }
+
     let bannerTitleTop = document.querySelector('.banner__title-top');
 
-    if (!isIOS() && bannerTitleTop) {
+    if (!isIOS() && !isMacOS() && bannerTitleTop) {
         bannerTitleTop.classList.add('mar-pad');
     }
 });
