@@ -1,0 +1,72 @@
+$white: #FFF
+$magenta: #FF267E
+
+$font-suisse-semiBold: SuisseIntl-SemiBold, sans-serif
+$font-suisse-medium: SuisseIntl-Medium, sans-serif
+
+body
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+.wrapper
+  width: 100%
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+.banner
+  position: relative
+  width: 50%
+  background: url("../img/bg.jpg") no-repeat 60% 100%/cover
+  @media screen and (width: 1706px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 20%/cover
+  @media screen and (max-width: 1376px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 10%/cover
+  @media screen and (width: 1366px) and (max-height: 792px)
+    background: url("../img/bg.jpg") no-repeat 60% 100%/cover
+  @media screen and (width: 1317px)
+    background: url("../img/bg.jpg") no-repeat 50% 20%/cover
+  @media screen and (max-width: 1280px) and (max-height: 760px)
+    background: url("../img/bg.jpg") no-repeat 60% 100%/cover
+  @media screen and (max-width: 1205px) and (max-height: 585px)
+    background: url("../img/bg.jpg") no-repeat 60% 100%/cover
+  @media screen and (max-width: 1037px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 20%/cover
+  @media screen and (width: 1024px) and (max-height: 631px)
+    background: url("../img/bg.jpg") no-repeat 60% 100%/cover
+  @media screen and (max-width: 1280px) and (min-height: 1240px) and (orientation: portrait)
+    background: url("../img/bg-tab-large.jpg") no-repeat 40%/cover
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: calc(var(--vh, 1vh) * 100)
+  overflow: hidden
+  &__container
+    width: 100%
+  &__title
+    text-align: center
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 42px
+    flex-direction: column
+    &-top,
+    &-bottom
+      background-color: $magenta
+      font-family: $font-suisse-medium
+      color: $white
+      font-size: 3.25vw
+      text-transform: uppercase
+      padding: 0 9px
+    &-top
+      &.mar-pad
+        padding-top: 5px
+        margin-top: -5px
+    &-bottom
+      margin-top: -5px
+      font-family: $font-suisse-semiBold
+
+
+
